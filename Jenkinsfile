@@ -8,7 +8,7 @@ pipeline{
 		}
 		stage("Run Test"){
 			steps{
-				bat "docker-compose up search-module1 search-module2 --no-color"
+				bat "docker-compose up search-module1 search-module2"
 			}
 		}
 		stage("Stop Grid"){
