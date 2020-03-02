@@ -1,6 +1,11 @@
 pipeline{
 	agent any
 	stages{
+		stage("Download image"){
+			steps{
+				bat "docker pull 11239956/selenium-testng-docker:1.0.9"
+			}
+		}
 		stage("Start Grid"){
 			steps{
 				bat "docker-compose up -d hub chrome firefox"
